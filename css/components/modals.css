@@ -1,0 +1,404 @@
+/* ## Modals */
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 5;
+    scroll-behavior: smooth;
+}
+
+.modal.modal-active {
+    display: flex;
+}
+
+.modal-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    margin: auto;
+    padding: 0;
+    border: 0;
+    /* background-color: var(--color-light); */
+}
+
+.modal-content--inner {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: var(--bg);
+    overflow-y: auto;
+    /* padding-bottom: 1rem; */
+}
+
+.modal-top .modal-content {
+    -webkit-animation-name: fadeInDown;
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeInDown;
+    animation-duration: 0.4s;
+}
+
+.modal-bottom .modal-content {
+    -webkit-animation-name: fadeInUp;
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeInUp;
+    animation-duration: 0.4s;
+}
+
+.modal-right .modal-content {
+    -webkit-animation-name: fadeInRight;
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeInRight;
+    animation-duration: 0.4s;
+}
+
+.modal-left .modal-content {
+    -webkit-animation-name: fadeInLeft;
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeInLeft;
+    animation-duration: 0.4s
+}
+
+.modal-full .modal-content {
+    width: 100%;
+    height: 100%;
+}
+
+.modal-sheet .modal-content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    max-height: 100vh;
+}
+
+.modal-large .modal-content {
+    width: 90%;
+    max-width: 1000px;
+    height: auto;
+}
+
+.modal-medium .modal-content {
+    width: 80%;
+    max-width: 800px;
+    height: auto;
+}
+
+.modal-default .modal-content {
+    width: 70%;
+    max-width: 700px;
+    height: auto;
+}
+
+.modal-small .modal-content {
+    width: 60%;
+    max-width: 600px;
+    height: auto;
+}
+
+.modal-dialog .modal-content {
+    width: 40%;
+    max-width: 400px;
+    height: auto;
+}
+
+.modal-dialog .modal-content--inner {
+    padding-bottom: 0;
+}
+
+.modal-sheet .modal-content--inner {
+    border-radius: 25px 25px 0 0;
+}
+
+.modal-large .modal-content--inner,
+.modal-medium .modal-content--inner,
+.modal-default .modal-content--inner,
+.modal-dialog .modal-content--inner,
+.modal-small .modal-content--inner {
+    border-radius: 10px;
+}
+
+/* .modal .close-modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+} */
+
+.modal .ids-fab-btn.action-btn--left,
+.modal .ids-fab-btn.back-modal {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+.modal .ids-fab-btn.action-btn--right {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.modal-header {
+    /* position: relative; */
+    background-color: var(--bg);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    min-height: 5.5rem;
+    margin: 0 0 2.5rem;
+    border-bottom: 1px solid var(--border);
+    padding: 0;
+    z-index: 1;
+}
+
+.modal-header--action {
+    flex: 1 1 0%;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.action--left {
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    padding-left: 1rem;
+}
+
+.action--right {
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    padding-right: 1rem;
+}
+
+.action--right {
+    margin-top: 1rem;
+}
+
+.action--right .dropdown {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.modal-header--content {
+    display: flex;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex: 1 1 160px;
+}
+
+.modal-body {
+    position: relative;
+    padding-bottom: 2.5rem;
+}
+
+.modal-cta,
+.modal-footer {
+    background-color: var(--color-light);
+    border-top: 1px solid rgb(239, 241, 244);
+    padding: 1rem 1rem 0;
+    width: 100%;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+@-webkit-keyframes fadeInDown {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        bottom: -300px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        bottom: -300px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInRight {
+    from {
+        right: -300px;
+        opacity: 0
+    }
+
+    to {
+        right: 0;
+        opacity: 1
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        right: -300px;
+        opacity: 0
+    }
+
+    to {
+        right: 0;
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInLeft {
+    from {
+        left: -300px;
+        opacity: 0
+    }
+
+    to {
+        left: 0;
+        opacity: 1
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        left: -300px;
+        opacity: 0
+    }
+
+    to {
+        left: 0;
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .modal-content {
+        width: 100%;
+    }
+
+    .modal-dialog .modal-content {
+        width: 65%;
+    }
+
+    .modal-dialog .modal-content {
+        width: 60%;
+    }
+
+    .modal-small .modal-content {
+        width: 70%;
+    }
+
+    .modal-medium .modal-content {
+        width: 80%;
+    }
+
+    .modal-large .modal-content {
+        width: 90%;
+    }
+
+    .modal-header {
+        padding: 0 1rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .modal-default .modal-content {
+        width: 80%;
+    }
+
+    .modal-dialog .modal-content {
+        width: 75%;
+    }
+
+    .modal-small .modal-content {
+        width: 85%;
+    }
+
+    .modal-medium .modal-content {
+        width: 90%;
+    }
+
+    .modal-large .modal-content {
+        width: 95%;
+    }
+}
+
+.modal-dialog--wrapper {
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+.modal-dialog--icon {
+    font-size: 6rem;
+}
+
+.modal-header__title {
+    display: flex;
+    flex-direction: row;
+}
+
+.modal-header__title-icon {
+    margin-right: 8px;
+}

@@ -1,0 +1,377 @@
+/* Forms */
+fieldset {
+    border: none;
+}
+
+.custom-select {
+    position: relative;
+    padding: 0;
+}
+
+.custom-select select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    margin: 0;
+    line-height: 3rem;
+    vertical-align: middle;
+}
+
+.custom-select select option {
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.custom-select select::-ms-expand {
+    display: none;
+}
+
+.custom-select::after {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+    border-right: 2px solid rgba(0, 0, 0, 0.5);
+    content: '';
+    display: block;
+    height: 8px;
+    width: 8px;
+    margin-top: -7px;
+    pointer-events: none;
+    position: absolute;
+    right: 2.4rem;
+    top: 50%;
+    -webkit-transform-origin: 66% 66%;
+    -ms-transform-origin: 66% 66%;
+    transform-origin: 66% 66%;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+}
+
+.custom-select:hover::after {
+    border-bottom: 2px solid var(--color-main);
+    border-right: 2px solid var(--color-main);
+}
+
+.custom-select:focus::after {
+    -webkit-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
+    transform: rotate(225deg);
+}
+
+/* IE9 and below */
+.oldie .custom-select::after {
+    display: none;
+}
+
+textarea {
+    min-height: 15rem;
+}
+
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+input[type="file"],
+input[type="date"],
+textarea,
+select {
+    display: block;
+    height: 5.75rem;
+    color: var(--text);
+    font-family: var(--font-main);
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2.2rem;
+    max-width: 100%;
+    background-color: var(--input);
+    border: 2px solid transparent !important;
+    border-radius: 6px;
+    padding: 1.5rem;
+    outline: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="email"]:focus ~ .textfield-icon,
+input[type="number"]:focus ~ .textfield-icon,
+input[type="search"]:focus ~ .textfield-icon,
+input[type="text"]:focus ~ .textfield-icon,
+input[type="tel"]:focus ~ .textfield-icon,
+input[type="url"]:focus ~ .textfield-icon,
+input[type="password"]:focus ~ .textfield-icon,
+input[type="file"]:focus ~ .textfield-icon,
+input[type="date"]:focus ~ .textfield-icon,
+textarea:focus ~ .textfield-icon,
+select:focus ~ .textfield-icon {
+    color: var(--text);
+    border: 2px solid transparent;
+}
+
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="file"]:focus,
+input[type="date"]:focus,
+textarea:focus,
+select:focus {
+    color: var(--text);
+    border: 2px solid var(--border);
+}
+
+input[type="email"]:active,
+input[type="number"]:active,
+input[type="search"]:active,
+input[type="text"]:active,
+input[type="tel"]:active,
+input[type="url"]:active,
+input[type="password"]:active,
+input[type="file"]:active,
+input[type="date"]:active,
+textarea:active,
+select:active {
+    color: var(--text);
+    border: 5px solid var(--border);
+}
+
+label,
+legend {
+    font-family: var(--font-main);
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.714;
+    margin-bottom: .5rem;
+    color: var(--text);
+    display: block;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    display: inline;
+}
+
+label>.label-text {
+    display: inline-block;
+    margin-left: 1rem;
+    font-family: var(--font-main);
+    ;
+    line-height: inherit;
+}
+
+label>input[type="checkbox"],
+label>input[type="radio"] {
+    margin: 0;
+    position: relative;
+    top: .2rem;
+}
+
+input[disabled] {
+    cursor: not-allowed;
+}
+
+input[readonly] {
+    background-color: var(--text);
+}
+
+/* ------------------------------------------------------------------- 
+ * ## Style Placeholder Text
+ * ------------------------------------------------------------------- */
+::-webkit-input-placeholder {
+
+    /* WebKit, Blink, Edge */
+    color: var(--placeholder);
+}
+
+:-moz-placeholder {
+
+    /* Mozilla Firefox 4 to 18 */
+    color: var(--placeholder);
+    opacity: 1;
+}
+
+::-moz-placeholder {
+
+    /* Mozilla Firefox 19+ */
+    color: var(--placeholder);
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+
+    /* Internet Explorer 10-11 */
+    color: var(--placeholder);
+}
+
+::-ms-input-placeholder {
+
+    /* Microsoft Edge */
+    color: var(--placeholder);
+}
+
+::placeholder {
+
+    /* Most modern-btn browsers support this now. */
+    color: var(--placeholder);
+}
+
+.placeholder {
+    color: var(--placeholder) !important;
+}
+
+/* ------------------------------------------------------------------- 
+ * ## Change Autocomplete styles in Chrome
+ * ------------------------------------------------------------------- */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--color-dark);
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Textfield */
+.form-group .textfield-wrapper {
+    margin-bottom: 0;
+}
+
+.textfield-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.textfield-inner {
+    position: relative;
+    display: inline-flex;
+    margin-bottom: 1rem;
+}
+
+.textfield-inner + .textfield-help {
+    margin-top: 0;
+}
+
+.textfield-inner input,
+.textfield-inner select,
+.textfield-inner textarea {
+    width: 100%;
+    border-width: 0;
+}
+
+.textfield-inner .custom-select {
+    width: 100%;
+}
+
+.textfield-inner.with-leading input {
+    padding-left: 48px;
+}
+
+.textfield-inner.with-trailing input {
+    padding-right: 48px;
+}
+
+.textfield-inner.with-both-icons input {
+    padding-left: 48px;
+    padding-right: 48px;
+}
+
+.textfield-inner.with-switch {
+    height: 62.5px;
+}
+
+.textfield-inner .switch {
+    padding-left: 60px;
+    transform: translateY(50%);
+}
+
+.textfield-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-58%);
+    color: var(--placeholder);
+    font-size: 2rem;
+}
+
+.textfield-icon--leading {
+    left: 16px;
+    right: auto;
+}
+
+.textfield-icon--trailing {
+    right: 14px;
+    left: auto;
+}
+
+.form-help,
+.textfield-help {
+    display: flex;
+    justify-content: flex-start;
+    margin: .5rem 0;
+    padding-right: 16px;
+    padding-left: 16px;
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
+.textfield-counter {
+    justify-content: flex-end;
+    font-size: 1.1rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.is-invalid {
+    color: var(--color-danger);
+}
+
+.is-invalid label {
+    color: var(--color-danger);
+}
+
+.is-invalid .textfield-inner input {
+    border: 1px solid var(--color-danger);
+}
+
+.is-invalid .textfield-icon {
+    color: var(--color-danger);
+}
+
+.textfield-inner--password .textfield-icon--trailing {
+    cursor: pointer;
+}
+
+.textfield-action input {
+    border-radius: 1.25rem;
+    padding-left: 48px;
+    padding-right: 110px;
+}
+
+.textfield-cta {
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    transform: translateY(-55%);
+}
+
+.textfield-cta .btn {
+    border-radius: .5rem;
+}
+
+.search input {
+    background-color: #fff;
+    border: 1px solid var(--color-border);
+}

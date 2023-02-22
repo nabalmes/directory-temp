@@ -1,0 +1,410 @@
+/* Buttons */
+.ids-btn,
+button.ids-btn {
+    display: inline-flex;
+    /* min-height: 42px;
+    min-width: 42px; */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-light-300);
+    color: var(--color-dark);
+    font-family: var(--font-main);
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    margin: 0;
+    border: 0.15rem solid var(--color-light-300);
+    border-radius: 0;
+    padding: .75rem 2.5rem;
+    text-align: center;
+    vertical-align: middle;
+    transition: all 0.3s ease-in-out;
+}
+
+.ids-btn .btn-icon--left,
+button.ids-btn .btn-icon--left {
+    margin-right: 8px;
+}
+
+.ids-btn .btn-icon--right,
+button.ids-btn .btn-icon--right {
+    margin-left: 8px;
+}
+
+button.ids-btn:hover {
+    color: var(--color-main);
+}
+
+.ids-btn.primary-btn {
+    background: var(--color-main);
+    color: var(--color-light) !important;
+    border: 0.15rem solid var(--color-main);
+}
+
+.ids-btn.primary-btn:hover {
+    background: var(--color-main-600);
+    border: 0.15rem solid var(--color-main-600);
+    box-shadow: var(--shadow-main-200);
+}
+
+.ids-btn.dark-btn {
+    background: var(--color-dark);
+    color: var(--color-light) !important;
+    border: 0.15rem solid var(--color-dark);
+}
+
+.ids-btn.dark-btn:hover {
+    background: #151718;
+    color: var(--color-light) !important;
+    box-shadow: 0px 5px 15px -5px rgba(16, 19, 22, .75);
+}
+
+.ids-btn.grey-btn {
+    background: var(--color-grey-dark-300);
+    color: var(--color-light) !important;
+    border: 0.15rem solid var(--color-grey-dark-300);
+}
+
+.ids-btn.grey-btn:hover {
+    background: var(--color-grey-dark);
+    border: 0.15rem solid var(--color-grey-dark);
+    box-shadow: 0px 5px 15px -5px rgba(153, 153, 153, .75);
+}
+
+.ids-btn.light-btn {
+    background: var(--color-light);
+    border: 0.15rem solid transparent;
+}
+
+.ids-btn.light-btn:hover {
+    background: #F3F3F3;
+}
+
+.ids-btn.primary-outline-btn {
+    background: transparent;
+    border: 0.15rem solid var(--color-main);
+    color: var(--color-main) !important;
+}
+
+.ids-btn.primary-outline-btn:hover {
+    background: var(--color-main);
+    color: var(--color-light) !important;
+    box-shadow: 0px 5px 15px -5px rgba(125, 192, 156, 0.75);
+}
+
+.ids-btn.dark-outline-btn {
+    background: transparent;
+    border: 0.15rem solid var(--color-dark);
+    background: transparent;
+}
+
+.ids-btn.dark-outline-btn:hover {
+    background: var(--color-dark);
+    color: var(--color-light) !important;
+}
+
+.ids-btn.grey-outline-btn {
+    background: transparent;
+    border: 0.15rem solid var(--color-grey);
+    color: var(--color-grey) !important;
+}
+
+.ids-btn.grey-outline-btn:hover {
+    background: var(--color-grey);
+    color: var(--color-light) !important;
+    box-shadow: 0px 5px 15px -5px rgba(242, 242, 242, .75);
+}
+
+.ids-btn.light-outline-btn {
+    background: transparent;
+    border: 0.15rem solid var(--color-light-400);
+    color: var(--color-light-400) !important;
+}
+
+.ids-btn.light-outline-btn:hover {
+    background: var(--color-light-100);
+    color: var(--color-dark) !important;
+    box-shadow: 0px 5px 15px -5px rgba(255, 255, 255, 0.75);
+}
+
+.ids-btn.primary-modern-btn {
+    border: 0.15rem solid #f7d3d4;
+    background: #f7d3d4;
+    color: var(--color-main) !important;
+}
+
+.ids-btn.dark-modern-btn {
+    border: 0.15rem solid var(--color-grey);
+    background: var(--color-grey);
+    color: var(--color-dark) !important;
+}
+
+.ids-btn.grey-modern-btn {
+    border: 0.15rem solid var(--color-grey-100);
+    background: var(--color-grey-100);
+    color: var(--color-grey-dark) !important;
+}
+
+.ids-btn.light-modern-btn {
+    border: 0.15rem solid var(--color-light);
+    background: var(--color-light);
+    color: #333333 !important;
+}
+
+.ids-btn[class$="-modern-btn"]:hover {
+    opacity: .65;
+}
+
+.ids-btn-link {
+    background-color: transparent;
+    color: var(--color-dark);
+    font-family: var(--font-main);
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: .2rem;
+    line-height: inherit;
+    margin: 1rem;
+    border-bottom: 2px solid var(--color-dark);
+    padding-bottom: .5rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.ids-btn-link.default-btn {
+    border-bottom: 2px solid var(--color-dark);
+    color: var(--color-dark);
+}
+
+.ids-btn-link.default-btn:hover {
+    border-bottom: 2px solid var(--color-main);
+    color: var(--color-main);
+}
+
+.ids-btn-link.primary-btn {
+    border-bottom: 2px solid var(--color-main);
+    color: var(--color-main);
+}
+
+.ids-btn-link.primary-btn:hover {
+    opacity: 0.6;
+}
+
+.ids-btn-link.dark-btn {
+    background-color: transparent;
+    border-bottom: 2px solid var(--color-dark);
+    color: var(--color-dark);
+}
+
+.ids-btn-link.dark-btn:hover {
+    opacity: 0.6;
+}
+
+.ids-btn-link.grey-btn {
+    border-bottom: 2px solid var(--color-grey);
+    color: var(--color-grey);
+}
+
+.ids-btn-link.grey-btn:hover {
+    opacity: 0.6;
+}
+
+.ids-btn-link.light-btn {
+    background-color: transparent;
+    border-bottom: 2px solid var(--color-light);
+    color: var(--color-light);
+}
+
+.ids-btn-link.light-btn:hover {
+    border-bottom: 2px solid var(--color-light-300);
+    color: var(--color-light-300);
+}
+
+.ids-btn-link.flat-btn {
+    border-bottom: 0;
+    color: var(--color-dark);
+}
+
+.ids-btn-link.flat-btn:hover {
+    border-bottom: 2px solid var(--color-main);
+    color: var(--color-main);
+}
+
+.ids-btn.flat-btn {
+    background: transparent;
+    border: 0.15rem solid transparent;
+}
+
+.ids-btn.flat-btn:hover {
+    opacity: .5;
+}
+
+.ids-btn.flat-btn.light-text {
+    color: var(--color-light) !important;
+}
+
+.ids-btn.raised-btn {
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.ids-btn.raised-btn:hover {
+    opacity: .5;
+}
+
+.ids-btn.danger-btn {
+    background: var(--color-danger);
+    color: var(--color-light) !important;
+}
+
+.ids-btn.warning-btn {
+    background: var(--color-warning);
+    color: var(--color-light) !important;
+}
+
+.ids-btn.info-btn {
+    background: var(--color-info);
+    color: var(--color-light) !important;
+}
+
+.ids-btn.success-btn {
+    background: var(--color-success);
+    color: var(--color-light) !important;
+}
+
+.ids-btn.alert-btn:hover {
+    opacity: 0.5;
+}
+
+.ids-btn.rounded-btn {
+    border-radius: 50px;
+}
+
+.ids-btn.rounded-15-btn {
+    border-radius: 15px;
+}
+
+.ids-btn.rounded-10-btn {
+    border-radius: 10px;
+}
+
+.ids-btn.rounded-5-btn {
+    border-radius: 5px;
+}
+
+.ids-btn.rounded-2-btn {
+    border-radius: 2.5px;
+}
+
+.ids-btn.rect-btn {
+    border-radius: 0;
+}
+
+.ids-btn.small-btn {
+    font-size: 1rem;
+    height: 32px;
+    padding: 0.6rem 1.5rem;
+}
+
+.ids-btn.medium-btn {
+    font-size: 1.5rem;
+    height: 50px;
+    padding: 1rem 2rem;
+    line-height: 1.75;
+}
+
+.ids-btn.large-btn {
+    font-size: 1.75rem;
+    padding: 1.2rem 2.4rem;
+    line-height: 1.9;
+}
+
+.ids-btn.block-btn {
+    width: 100%;
+}
+
+.ids-btn.icon-square {
+    height: 40px;
+    width: 40px;
+    padding: .75rem;
+    text-align: center;
+}
+
+.ids-btn.circle-btn {
+    height: 40px;
+    width: 40px;
+    border-radius: 200px;
+    padding: .75rem;
+}
+
+.ids-fab-btn {
+    display: inline-block;
+    background-color: var(--fab);
+    color: var(--text);
+    font-size: 2.5rem;
+    width: 4rem;
+    height: 4rem;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 1.6;
+}
+
+.light-btn {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+}
+
+.dark-btn {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+.ids-fab-btn.medium-btn {
+    width: 5rem;
+    height: 5rem;
+    font-size: 30px;
+}
+
+.ids-fab-btn.large-btn {
+    width: 6rem;
+    height: 6rem;
+    font-size: 3.5rem;
+}
+
+.ids-btn.mobile-btn {
+    display: inline-block;
+    background: transparent;
+    color: var(--color-dark);
+    font-family: var(--font-main);
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    border: .15rem transparent;
+    cursor: pointer;
+    margin: 0;
+    padding: 0 .8rem;
+    text-align: center;
+    vertical-align: text-bottom;
+    transition: all .3s ease-in-out;
+}
+
+.ids-btn.mobile-btn:hover {
+    color: var(--color-main);
+}
+
+.ids-btn.mobile-btn span {
+    font-size: 1.75rem;
+    font-weight: 500;
+    line-height: 0;
+    vertical-align: middle;
+}
+
+.btn-left {
+    float: left;
+}
+
+.btn-right {
+    float: right;
+}

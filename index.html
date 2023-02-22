@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#191a1b">
+    
+    <title>Login · Email Management | IntegrityNet</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components/buttons.css">
+    <link rel="stylesheet" href="css/components/forms.css">
+    <link rel="stylesheet" href="css/components/tables.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <svg class="action-button menu-button" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </div>
+        <div class="header-center">
+            <img src="img/icon.svg" alt="logo" class="logo">
+            <span class="logo-text">Phone Directory</span>
+        </div>
+        <div class="header-right">
+            <button class="action-button system-pref-button" role="switch" aria-label="light/dark mode">
+                <svg class="system-pref system-pref--dark-mode" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+            <audio src="audio/light-on.mp3" class="theme-audio--light-on" data-attribute="adapted from user 160033 file on freesound.org https://freesound.org/people/160033/sounds/366184/ under CC BY-NC 3.0"></audio>
+            <audio src="audio/light-off.mp3" class="theme-audio--light-off" data-attribute="adapted from user 160033 file on freesound.org https://freesound.org/people/160033/sounds/366184/ under CC BY-NC 3.0"></audio>
+        </div>
+    </header>
+
+    <main class="content">
+        <div class="start-page">
+            <small>IntegrityNet</small>
+
+            <h1 class="display-heading">Phone Directory</h1>
+
+            <form action="directories.html">
+               
+
+                <button type="submit" class="ids-btn primary-btn medium-btn rounded-5-btn block-btn">Enter</button>
+            </form>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="copyright">
+            &copy; IntegrityNet Solutions &amp; Services <script>document.write(new Date().getFullYear())</script> 
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="js/theme.js"></script>
+    <script type="module" src="js/main.js"></script>
+
+    <script>
+        const togglePassword = function() {
+            $('.textfield-inner--password').on('click', '.textfield-icon--trailing', function(){
+                textfieldPassword = $(this).parent().find("input");
+                if (textfieldPassword.attr("type") == "password") {
+                    textfieldPassword.attr("type", "text");
+                } else {
+                    textfieldPassword.attr("type", "password");
+                }
+
+                $(this).toggleClass('mdi-eye mdi-eye-off');
+            });
+        }
+
+        togglePassword();
+    </script>
+</body>
+</html>

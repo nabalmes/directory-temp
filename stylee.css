@@ -1,0 +1,171 @@
+@import url('https: //fonts.googleapis.com/css?family=Poppins: 200,300,400,500,600,700,800,900&display=swap'/);
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+
+}
+body
+{
+	background: lightblue;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+.container {
+	position: relative;
+	width: 100%;
+	max-width: 1000px;
+	min-height: 1300px;
+	margin: 50px;
+	background: #fff;
+	display: grid;
+	grid-template-columns: 1fr 10fr;
+	box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+
+}
+.container .left_side
+{
+	position: relative;
+	background: #2A6EE6;
+	padding: 40px;
+}
+.container .right_side
+{
+	position: relative;
+	background: #fff;
+	padding: 40px;
+}
+.profileText
+{
+	font-weight: bold;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 20px;
+	
+
+}
+.profileText h1 
+{
+	color: #2A6EE6;
+	font-size: 40px;
+	font-family: calibri;
+	margin-top: 20px;
+	margin-right: 500px;
+	text-transform: uppercase;
+	text-align: center;
+	
+	
+}
+.profileText h2 
+{
+	color: #2A6EE6;
+	font-size: 15px;
+	margin-top: 5px;
+	margin-right: 500px;
+	text-transform: uppercase;
+	text-align: center;
+	
+	
+}
+profileText .imgBx img
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+
+.OBJECTIVES
+	{
+		
+		position: relative;
+		color: #2A6EE6;
+		font-size: 12px;
+		
+
+	}
+.OBJECTIVES ul 
+{
+
+	font-size: 16px;
+	font-family: arial;
+	line-height: 1.6;
+	color: gray;
+	margin-top: 20px;
+}
+.OBJECTIVES h3 
+{
+	font-family: arial;
+	letter-spacing: 3px;
+	width: 350px;
+	border-top: solid 0.1em darkgray;
+	border-bottom: solid 0.1em darkgray;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+.maininterest
+	{
+		margin-top: 20px;
+		position: relative;
+		color: #2A6EE6;
+		font-size: 12px;
+		
+
+	}
+.maininterest ul li
+{
+
+	font-size: 16px;
+	font-family: arial;
+	line-height: 1.6;
+	color: gray;
+	margin-top: 20px;
+	position: relative;
+	left: 35px;
+}
+.maininterest h3 
+{
+	font-family: arial;
+	letter-spacing: 3px;
+	width: 350px;
+	border-top: solid 0.1em darkgray;
+	border-bottom: solid 0.1em darkgray;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+.careerhistory
+	{
+		margin-top: 20px;
+		position: relative;
+		color: #2A6EE6;
+		font-size: 12px;
+		
+
+	}
+.careerhistory ul 
+{
+
+	font-size: 16px;
+	font-family: arial;
+	line-height: 1.6;
+	color: gray;
+	margin-top: 20px;
+}
+.careerhistory h3 
+{
+	font-family: arial;
+	letter-spacing: 3px;
+	width: 350px;
+	border-top: solid 0.1em darkgray;
+	border-bottom: solid 0.1em darkgray;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}

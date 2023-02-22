@@ -1,0 +1,63 @@
+/* ## Tables */
+table {
+    border-width: 0;
+    width: 100%;
+    max-width: 100%;
+    font-family: var(--font-main);
+}
+
+th,
+td {
+    padding: 1.5rem 3rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+th {
+    color: var(--text);
+    font-family: var(--font-main);
+    font-weight: 600;
+}
+
+td {
+    line-height: 1.5;
+}
+
+th:first-child,
+td:first-child {
+    padding-left: 0;
+}
+
+th:last-child,
+td:last-child {
+    padding-right: 0;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table-empty {
+    width: 100%;
+    text-align: center;
+    padding: 5rem;
+}
+
+table .ids-btn {
+    border-radius: .5rem;
+}
+
+.table-preaction table thead tr th:first-child,
+.table-postaction table thead tr th:last-child {
+    min-width: 150px;
+}
+
+.table-preaction table tbody tr td:first-child,
+.table-postaction table thead tr th:last-child {
+    text-align: center;
+}
+
+.email-action-buttons {
+    margin: 2.5rem 0;
+}
